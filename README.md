@@ -41,9 +41,9 @@ pip install torch-scatter -f https://data.pyg.org/whl/torch-2.4.1+cu118.html
 ```
 
 ## Dataset 
-We provide the dataset of `PPBench2024` through [google drive](https://drive.google.com/drive/folders/1ce5DVmZz0c-p3PKrGDQoU_C9MD3cWLNq), together with `PPDBench'.
+We provide the dataset of `PPBench2024` through [google drive](https://drive.google.com/drive/folders/1Fcxh45AdlFfpimFZEyK_lKOBq2HmEcH2?usp=drive_link), together with `PPDBench'.
 
-Please download `data.zip` and unzip it, leading to the data file directory as 
+Please download `PPBench2024.zip` `PPDBench.zip` and unzip it, leading to the data file directory as 
 ```
 - dataset
     - Train
@@ -70,8 +70,8 @@ python train.py
 
 #### After training, you can choose an epoch for generating the peptides through:
 
-For batch generation, you should first download the pre-trained `best_model_epoch_25_loss_0.4112.pth` model from [google drive](Google XXXXX), then save it as `. /checkpoint/best_model_epoch_25_loss_0.4112.pth` and finally run the following command for batch generation:
-
+For batch generation, you should first download the pre-trained `best_model_epoch_25_loss_0.4112.pth` model from [google drive](https://drive.google.com/drive/folders/1Fcxh45AdlFfpimFZEyK_lKOBq2HmEcH2?usp=drive_link), then save it as `. /checkpoint/best_model_epoch_25_loss_0.4112.pth` and finally run the following command for batch generation:
+For ESM3 and Progen2 weights, you can download the `log.zip` configuration file from [google drive](https://drive.google.com/file/d/17Q8rNNs97jdl1F_MgEPY7JDQhZpiAknK/view?usp=sharing).
 ```
 python ./utils/evaluate/batch_generate.py
 
@@ -79,7 +79,7 @@ python ./utils/evaluate/batch_generate_top3.py
 
 python ./utils/evaluate/batch_generate_top5.py
 ```
-If you want to evaluate peptides directly, they are available from our Google Drive as `peptides_results.zip`, containing 5 samples per protein structure for more robust evaluation.
+If you want to evaluate peptides directly, they are available from our Google Drive as `peptides1-5.zip`, containing 5 samples per protein structure for more robust evaluation.
 
 
 ## Packages and Scripts for Evaluation
